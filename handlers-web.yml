@@ -1,0 +1,27 @@
+---
+ - name: Install Webserver
+   hosts: all
+
+   tasks: 
+     - name: install httpd
+       yum: 
+         name:  mariadb-server
+         state: present
+       notify: start service
+
+     - name: create  a file
+       file:
+         path: /tmp/index.php
+         state: touch
+
+     - name: create a user
+       user:
+         name: demo1
+         state: present
+
+
+   handlers: 
+     - name: start service
+       service: 
+         name: mariadb
+         state: started

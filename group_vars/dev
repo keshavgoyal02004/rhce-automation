@@ -1,0 +1,5 @@
+username: dev
+dir: development
+
+machine_name: machine1
+port: 222

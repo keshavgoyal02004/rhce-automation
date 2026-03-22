@@ -1,0 +1,11 @@
+---
+ - name: Mount ISO
+   hosts: all
+
+   tasks: 
+     - name: Mount the iso on /mnt
+       mount:
+         src: /dev/sr0
+         path: /mnt
+         fstype: auto
+         state: mounted

@@ -1,0 +1,9 @@
+--- 
+ - name: modify selinux context
+   hosts: all
+
+   tasks:
+     - name: changing the selinux context to htpps_sys_content_t
+       file:
+         path: /file
+         setype: httpd_sys_content_t

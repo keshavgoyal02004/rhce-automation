@@ -1,0 +1,10 @@
+--- 
+ - name : create a user
+   user :
+     name : "{{ username  }}"
+     state : present
+
+ - name: copy a file
+   copy: 
+     src: abc.txt
+     dest: /tmp/abc.txt

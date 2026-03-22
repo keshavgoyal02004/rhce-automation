@@ -1,0 +1,5 @@
+---
+ - name: Create user task1
+   user:
+     name: task1
+     state: present

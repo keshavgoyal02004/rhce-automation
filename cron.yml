@@ -1,0 +1,12 @@
+---
+ - name: Use Contab
+   hosts: all
+
+   tasks: 
+     - name: Crontjob
+       cron:
+         name: "test"
+         minute: "*/2"
+         user: admin
+         job: logger "RHCE Practice"
+         state: present

@@ -1,0 +1,1 @@
+IP address of this machine is == {{ ansible_facts.default_ipv4.address}} 

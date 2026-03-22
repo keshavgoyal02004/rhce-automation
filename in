@@ -1,0 +1,6 @@
+[dev]
+192.168.88.133	username=node1	 dir=dev_node 		# node1
+
+
+[prod]
+192.168.88.131  username=node2  dir=prod_node		# node2

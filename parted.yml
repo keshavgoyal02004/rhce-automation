@@ -1,0 +1,30 @@
+---
+ - name: Using parted module
+   hosts: all
+
+   tasks:
+     - name: create a directory
+       file: 
+         path: /databases
+         state: directory
+
+     - name: use parted
+       parted:
+         device: /dev/sdb
+         number: 1
+         state: present
+         part_end: 750MiB
+
+     - name: create filesystem
+       filesystem:
+         fstype: ext4
+         dev: /dev/sdb1
+
+     - name: mount the sdb1
+       mount: 
+         path: /databases
+         src: /dev/sdb1
+         fstype: ext4
+         state: present # require mount -a explicitly
+           #state: mounted
+

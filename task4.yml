@@ -1,0 +1,5 @@
+---
+ - name: create a dir
+   file:
+     path: /task4
+     state: directory

@@ -1,0 +1,6 @@
+[dev]
+node1 ansible_host=192.168.88.130	hostname=node1	http_port=8080	server_role="Primary Server"	# node1
+
+
+[prod]
+node2 ansible_host=192.168.88.135 	hostname=node2	http_port=8000	server_role="Secondary Server"	# node2

@@ -1,0 +1,10 @@
+---
+ - name: Practice line in file module
+   hosts: all
+
+   tasks:
+     - name: use line in file
+       lineinfile:
+         path: /file
+         line: "This is line one"
+         state: present

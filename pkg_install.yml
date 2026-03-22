@@ -1,0 +1,20 @@
+---
+ - name: Simple loop example
+   hosts: all
+
+   tasks: 
+     - name: install httpd
+       yum:
+         name: httpd
+         state: present
+
+     - name: install mariadb-server
+       yum: 
+         name: mariadb-server
+         state: present
+
+
+     - name: install ftp
+       yum: 
+         name: ftp
+         state: present

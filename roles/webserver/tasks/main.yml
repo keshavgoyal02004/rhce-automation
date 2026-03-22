@@ -1,0 +1,25 @@
+---
+ - name: Install httpd
+   yum:
+     name: httpd
+     state: present
+
+ - name: start service
+   service: 
+     name: httpd
+     state: started
+       # enabled: yes
+
+ - name: copy index file
+   template:
+     src: index.html.j2
+     dest: /var/www/html/index.html
+
+ - name: Permanently enable http through firewalld 
+   firewalld:
+     service: http
+     state: enabled
+     permanent: true
+     immediate: true
+     offline: true
+

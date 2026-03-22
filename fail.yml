@@ -1,0 +1,20 @@
+---
+ - name: fail tasks
+   hosts: all
+
+   tasks: 
+     - name: create a file
+       file:
+         path: /tmp/iamfile
+         state: touch
+
+     - name: fail task
+       yum:
+         name: notapkg
+         state: latest
+       ignore_errors: yes
+
+     - name: create file
+       file:
+         path: iamafile
+         state: touch

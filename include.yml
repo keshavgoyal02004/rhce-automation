@@ -1,0 +1,10 @@
+---
+ - name: include playbook example
+   hosts: all
+
+   tasks:
+     - name: Include Task1
+       include_tasks: task1.yml
+
+     - name: Include Task2
+       include_tasks: task2.yml

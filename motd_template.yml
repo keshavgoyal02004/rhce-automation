@@ -1,0 +1,9 @@
+---
+ - name: Creating motd file
+   hosts: all
+
+   tasks: 
+     - name: templating motd
+       template:
+         src: motd.j2
+         dest: /motd

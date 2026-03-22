@@ -1,0 +1,9 @@
+---
+ - name: Fetching file from managed hosts
+   hosts: all
+
+   tasks: 
+     - name:  fetch the file
+       fetch:
+         src: /file
+         dest: /root/

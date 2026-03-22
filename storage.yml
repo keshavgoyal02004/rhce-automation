@@ -1,0 +1,13 @@
+---
+ - name: creating a partition
+   hosts: all
+   roles:
+     - name: redhat.rhel_system_roles.storage
+       storage_volumes:
+         - name: images
+           type: disk
+           disks: /dev/sda
+           fs_type: xfs
+           mount_point: /clg
+
+       

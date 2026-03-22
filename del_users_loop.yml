@@ -1,0 +1,13 @@
+---
+ - name: Delete Users
+   hosts: all 
+   vars_files:
+     del_list.yaml
+
+   tasks: 
+     - name: deleting user through the loop
+       user:
+         name: "{{ item }}"
+         state: absent
+       loop: "{{ users }}" 
+...

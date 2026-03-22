@@ -1,0 +1,11 @@
+---
+ - name: creating a conditional tasks
+   hosts: all
+
+   tasks:
+     - name: Install httpd
+       yum: 
+         name: httpd
+         state: present
+       when: ansible_facts.distribution == "RedHat" or ansible_facts.distribution == "Ubuntu"
+       when: ( ansible_facts.distribution == "RedHat" and ansible_facts.distribution_version == "9.0") or (ansible_facts.distribution == "Ubuntu" and ansible_facts.distribution_version == "8.0")

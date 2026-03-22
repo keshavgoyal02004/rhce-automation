@@ -1,0 +1,14 @@
+---
+ - name: Simple loop example
+   hosts: all
+
+   tasks: 
+     - name: remove packages
+       yum:
+         name: "{{ item }}"
+         state: absent
+       loop:
+         - httpd
+         - mariadb-server
+         - ftp
+

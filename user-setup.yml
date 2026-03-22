@@ -1,0 +1,20 @@
+---
+ - name: Create user and directory
+   hosts: all
+     #   vars: 
+     #     username: her
+     #     dir: test
+     # vars_files:
+     #   user-var.yml
+   tasks:
+     - name: Create User
+       user:
+         name: "{{ username }}"
+         state: present
+
+     - name: Create Dir
+       file:
+         # path: "/home/{{ username }}/{{ dir }}"
+         path: "{{ dir }}"
+         state: directory
+         owner: "{{ username }}"

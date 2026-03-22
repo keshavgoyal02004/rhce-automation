@@ -1,0 +1,15 @@
+--- 
+ - name: Loop Over Dictonary
+   hosts: all
+
+   tasks: 
+     - name: Create user and group
+       user:
+         name: "{{ item.name }}"
+         state: present
+         groups: "{{ item['groups'] }}"  # secondary grp; group->primary
+       loop:
+         - name: jane
+           groups: wheel
+         - name: joe
+           groups: root

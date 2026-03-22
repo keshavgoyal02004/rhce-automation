@@ -1,0 +1,11 @@
+---
+ - name: Using selinux role
+   hosts: all
+   vars:
+     # selinux_state: permissive
+     selinux_state: enforcing
+
+   roles:
+     - role: redhat.rhel_system_roles.selinux
+       become: true
+

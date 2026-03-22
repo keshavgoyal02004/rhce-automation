@@ -1,0 +1,9 @@
+---
+ - name: Copy
+   hosts: all
+
+   tasks: 
+     - name: using copy module
+       copy:
+         src: text.txt
+         dest: /text.txt

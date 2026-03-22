@@ -1,0 +1,10 @@
+---
+ - name: import playbook example
+   hosts: all
+
+   tasks:
+     - name: Import Task3
+       import_tasks: task3.yml
+
+     - name: Import Task4
+       import_tasks: task4.yml

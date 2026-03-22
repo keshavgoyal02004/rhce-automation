@@ -1,0 +1,9 @@
+---
+ - name: Install a webserver
+   hosts: all
+   tasks:
+     - name: Copy Index File
+       copy:
+         src: index.html
+         dest: /udi
+...

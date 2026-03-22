@@ -1,0 +1,6 @@
+username: prod
+dir: production
+
+
+machine_name: machine2
+port: 2244

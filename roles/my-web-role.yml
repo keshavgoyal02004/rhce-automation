@@ -1,0 +1,5 @@
+---
+ - name: using webserver role
+   hosts: all
+   roles:
+     - webserver

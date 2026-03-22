@@ -1,0 +1,19 @@
+---
+ - name: Using Jinja 2
+   hosts: all
+
+   tasks: 
+     - name: template module
+       template:
+         src: text.j2
+         dest: /text
+
+
+ - name: Changing ssh port number
+   hosts: all
+   tasks: 
+     - name: ssh template
+       template: 
+         src: sshd_config.j2
+         dest: /etc/ssh/sshd_config
+         backup: yes

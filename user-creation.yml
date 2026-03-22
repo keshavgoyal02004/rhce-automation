@@ -1,0 +1,21 @@
+---
+ - name: Creating new user
+   hosts: all
+
+   tasks:
+     - name: creating user
+       user:
+         name: rhce
+         state: present
+
+     - name: creating dir
+       file:
+         path: /udi
+         state: directory
+         group: redhat
+         mode: 0644
+
+     - name:
+       group:
+         name: redhat
+         state: present

@@ -1,0 +1,9 @@
+---
+ - name: Copy name file
+   hosts: all
+
+   tasks: 
+     - name: Copy template
+       template:
+         src: name.j2
+         dest: /name

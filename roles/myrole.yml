@@ -1,0 +1,7 @@
+---
+ - name: Create user
+   hosts: all
+   vars:
+     username: ramesh
+   roles:
+     - myuser

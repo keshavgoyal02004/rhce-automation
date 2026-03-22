@@ -1,0 +1,9 @@
+---
+ - name: Configure Repos
+   hosts: all
+
+   tasks:
+     - name: Copying Repo File
+       copy:
+         src: repo
+         dest: /etc/yum.repos.d/local.repo

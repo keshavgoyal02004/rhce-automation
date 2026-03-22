@@ -1,0 +1,22 @@
+---
+ - name: Configuring Repo
+   hosts: all
+
+   tasks: 
+     - name: Configure AppStream
+       yum_repository:
+         name: AppStream
+         baseurl: file:///mnt/AppStream
+         gpgcheck: 0
+         enabled: 1
+         description: AppStream
+
+     - name: Configure BaseOS
+       yum_repository:
+         name: BaseOS
+         baseurl: file:///mnt/BaseOS
+         gpgcheck: 0
+         enabled: 1
+         description: BaseOS
+
+...

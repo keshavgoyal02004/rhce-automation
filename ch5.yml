@@ -1,0 +1,13 @@
+---
+ - name: using filr module
+   hosts: all
+
+   tasks:
+     - name: creating a file
+       file: 
+         path: /file
+         owner: demo
+         group: demo
+         mode: 0600
+         state: touch
+         setype: user_home_t
